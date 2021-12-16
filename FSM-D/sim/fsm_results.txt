@@ -1,0 +1,334 @@
+# Compile of fsm.sv was successful.
+# Compile of register.sv was successful.
+# Compile of comparator.sv was successful.
+# Compile of findMax.sv was successful.
+# Compile of tb_findMax.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.tb_findMax
+# End time: 18:53:01 on Oct 21,2021, Elapsed time: 0:03:11
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.tb_findMax 
+# Start time: 18:53:01 on Oct 21,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_findMax(fast)
+# Loading work.findMax(fast)
+# Loading work.register(fast)
+# Loading work.comparator(fast)
+# Loading work.fsm(fast)
+run -all
+# ECE (System)Verilog workshop Fall 2021: findMax test - Pradeep Reddy (pmanthu@pdx.edu)
+# Sources: N:/PSUProjects/ece508f21/pmanthu/hw2/prob2/hdl
+# 
+#                    0 st=Reset, ns=Reset, start=0, inputA=xx, done=0, myMax=00, maxValue=00
+#                    6 st=Reset, ns=Check, start=1, inputA=2a, done=0, myMax=2a, maxValue=00
+#                   16 st=Check, ns=Check, start=1, inputA=51, done=0, myMax=51, maxValue=2a
+#                   26 st=Check, ns=Check, start=1, inputA=9f, done=0, myMax=9f, maxValue=51
+#                   36 st=Check, ns=Check, start=1, inputA=a7, done=0, myMax=a7, maxValue=9f
+#                   46 st=Check, ns=Check, start=1, inputA=c5, done=0, myMax=c5, maxValue=a7
+#                   56 st=Check, ns=Check, start=1, inputA=94, done=0, myMax=c5, maxValue=c5
+#                   66 st=Check, ns=Check, start=1, inputA=1f, done=0, myMax=c5, maxValue=c5
+#                   76 st=Check, ns=Check, start=1, inputA=14, done=0, myMax=c5, maxValue=c5
+#                   86 st=Check, ns=Check, start=1, inputA=ca, done=0, myMax=ca, maxValue=c5
+#                   96 st=Check, ns=Check, start=1, inputA=c3, done=0, myMax=ca, maxValue=ca
+#                  106 st=Check, ns=Check, start=1, inputA=ec, done=0, myMax=ec, maxValue=ca
+#                  116 st=Check, ns=Check, start=1, inputA=97, done=0, myMax=ec, maxValue=ec
+#                  126 st=Check, ns=Check, start=1, inputA=0b, done=0, myMax=ec, maxValue=ec
+#                  136 st=Check, ns=Check, start=1, inputA=6c, done=0, myMax=ec, maxValue=ec
+#                  146 st=Check, ns=Reset, start=0, inputA=6c, done=1, myMax=ec, maxValue=ec
+# Correct max (ec) found
+#                  156 st=Reset, ns=Reset, start=0, inputA=6c, done=1, myMax=ec, maxValue=ec
+#                  166 st=Reset, ns=Check, start=1, inputA=cb, done=1, myMax=cb, maxValue=ec
+#                  176 st=Check, ns=Check, start=1, inputA=a9, done=1, myMax=cb, maxValue=cb
+#                  186 st=Check, ns=Check, start=1, inputA=2d, done=1, myMax=cb, maxValue=cb
+#                  196 st=Check, ns=Check, start=1, inputA=47, done=1, myMax=cb, maxValue=cb
+#                  206 st=Check, ns=Check, start=1, inputA=ad, done=1, myMax=cb, maxValue=cb
+#                  216 st=Check, ns=Check, start=1, inputA=41, done=1, myMax=cb, maxValue=cb
+#                  226 st=Check, ns=Check, start=1, inputA=b6, done=1, myMax=cb, maxValue=cb
+#                  236 st=Check, ns=Check, start=1, inputA=38, done=1, myMax=cb, maxValue=cb
+#                  246 st=Check, ns=Check, start=1, inputA=bc, done=1, myMax=cb, maxValue=cb
+#                  256 st=Check, ns=Check, start=1, inputA=e7, done=1, myMax=e7, maxValue=cb
+#                  266 st=Check, ns=Check, start=1, inputA=6d, done=1, myMax=e7, maxValue=e7
+#                  276 st=Check, ns=Check, start=1, inputA=46, done=1, myMax=e7, maxValue=e7
+#                  286 st=Check, ns=Check, start=1, inputA=be, done=1, myMax=e7, maxValue=e7
+#                  296 st=Check, ns=Check, start=1, inputA=87, done=1, myMax=e7, maxValue=e7
+#                  306 st=Check, ns=Check, start=1, inputA=6f, done=1, myMax=e7, maxValue=e7
+#                  316 st=Check, ns=Check, start=1, inputA=0f, done=1, myMax=e7, maxValue=e7
+#                  326 st=Check, ns=Check, start=1, inputA=19, done=1, myMax=e7, maxValue=e7
+#                  336 st=Check, ns=Check, start=1, inputA=8c, done=1, myMax=e7, maxValue=e7
+#                  346 st=Check, ns=Check, start=1, inputA=3d, done=1, myMax=e7, maxValue=e7
+#                  356 st=Check, ns=Reset, start=0, inputA=3d, done=1, myMax=e7, maxValue=e7
+# Correct max (e7) found
+#                  366 st=Reset, ns=Reset, start=0, inputA=3d, done=1, myMax=e7, maxValue=e7
+#                  376 st=Reset, ns=Check, start=1, inputA=02, done=1, myMax=02, maxValue=e7
+#                  386 st=Check, ns=Check, start=1, inputA=78, done=1, myMax=78, maxValue=02
+#                  396 st=Check, ns=Check, start=1, inputA=1f, done=1, myMax=78, maxValue=78
+#                  406 st=Check, ns=Check, start=1, inputA=43, done=1, myMax=78, maxValue=78
+#                  416 st=Check, ns=Check, start=1, inputA=75, done=1, myMax=78, maxValue=78
+#                  426 st=Check, ns=Check, start=1, inputA=52, done=1, myMax=78, maxValue=78
+#                  436 st=Check, ns=Check, start=1, inputA=62, done=1, myMax=78, maxValue=78
+#                  446 st=Check, ns=Check, start=1, inputA=d4, done=1, myMax=d4, maxValue=78
+#                  456 st=Check, ns=Check, start=1, inputA=d1, done=1, myMax=d4, maxValue=d4
+#                  466 st=Check, ns=Check, start=1, inputA=64, done=1, myMax=d4, maxValue=d4
+#                  476 st=Check, ns=Check, start=1, inputA=3a, done=1, myMax=d4, maxValue=d4
+#                  486 st=Check, ns=Check, start=1, inputA=b4, done=1, myMax=d4, maxValue=d4
+#                  496 st=Check, ns=Check, start=1, inputA=74, done=1, myMax=d4, maxValue=d4
+#                  506 st=Check, ns=Check, start=1, inputA=19, done=1, myMax=d4, maxValue=d4
+#                  516 st=Check, ns=Reset, start=0, inputA=19, done=1, myMax=d4, maxValue=d4
+# Correct max (d4) found
+#                  526 st=Reset, ns=Reset, start=0, inputA=19, done=1, myMax=d4, maxValue=d4
+#                  536 st=Reset, ns=Check, start=1, inputA=20, done=1, myMax=20, maxValue=d4
+#                  546 st=Check, ns=Check, start=1, inputA=d7, done=1, myMax=d7, maxValue=20
+#                  556 st=Check, ns=Check, start=1, inputA=5c, done=1, myMax=d7, maxValue=d7
+#                  566 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=d7, maxValue=d7
+#                  576 st=Check, ns=Check, start=1, inputA=c9, done=1, myMax=d7, maxValue=d7
+#                  586 st=Check, ns=Check, start=1, inputA=42, done=1, myMax=d7, maxValue=d7
+#                  596 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=d7, maxValue=d7
+#                  606 st=Check, ns=Check, start=1, inputA=79, done=1, myMax=d7, maxValue=d7
+#                  616 st=Check, ns=Check, start=1, inputA=31, done=1, myMax=d7, maxValue=d7
+#                  626 st=Check, ns=Check, start=1, inputA=cd, done=1, myMax=d7, maxValue=d7
+#                  636 st=Check, ns=Check, start=1, inputA=ad, done=1, myMax=d7, maxValue=d7
+#                  646 st=Check, ns=Check, start=1, inputA=58, done=1, myMax=d7, maxValue=d7
+#                  656 st=Check, ns=Check, start=1, inputA=3d, done=1, myMax=d7, maxValue=d7
+#                  666 st=Check, ns=Check, start=1, inputA=52, done=1, myMax=d7, maxValue=d7
+#                  676 st=Check, ns=Check, start=1, inputA=ed, done=1, myMax=ed, maxValue=d7
+#                  686 st=Check, ns=Check, start=1, inputA=7e, done=1, myMax=ed, maxValue=ed
+#                  696 st=Check, ns=Check, start=1, inputA=a0, done=1, myMax=ed, maxValue=ed
+#                  706 st=Check, ns=Check, start=1, inputA=dd, done=1, myMax=ed, maxValue=ed
+#                  716 st=Check, ns=Check, start=1, inputA=9b, done=1, myMax=ed, maxValue=ed
+#                  726 st=Check, ns=Reset, start=0, inputA=9b, done=1, myMax=ed, maxValue=ed
+# Correct max (ed) found
+#                  736 st=Reset, ns=Reset, start=0, inputA=9b, done=1, myMax=ed, maxValue=ed
+#                  746 st=Reset, ns=Check, start=1, inputA=a9, done=1, myMax=a9, maxValue=ed
+#                  756 st=Check, ns=Check, start=1, inputA=90, done=1, myMax=a9, maxValue=a9
+#                  766 st=Check, ns=Check, start=1, inputA=68, done=1, myMax=a9, maxValue=a9
+#                  776 st=Check, ns=Check, start=1, inputA=3e, done=1, myMax=a9, maxValue=a9
+#                  786 st=Check, ns=Check, start=1, inputA=1e, done=1, myMax=a9, maxValue=a9
+#                  796 st=Check, ns=Check, start=1, inputA=06, done=1, myMax=a9, maxValue=a9
+#                  806 st=Check, ns=Check, start=1, inputA=a9, done=1, myMax=a9, maxValue=a9
+#                  816 st=Check, ns=Reset, start=0, inputA=a9, done=1, myMax=a9, maxValue=a9
+# Correct max (a9) found
+#                  826 st=Reset, ns=Reset, start=0, inputA=a9, done=1, myMax=a9, maxValue=a9
+#                  836 st=Reset, ns=Check, start=1, inputA=96, done=1, myMax=96, maxValue=a9
+#                  846 st=Check, ns=Check, start=1, inputA=79, done=1, myMax=96, maxValue=96
+#                  856 st=Check, ns=Check, start=1, inputA=ec, done=1, myMax=ec, maxValue=96
+#                  866 st=Check, ns=Check, start=1, inputA=6a, done=1, myMax=ec, maxValue=ec
+#                  876 st=Check, ns=Check, start=1, inputA=10, done=1, myMax=ec, maxValue=ec
+#                  886 st=Check, ns=Check, start=1, inputA=22, done=1, myMax=ec, maxValue=ec
+#                  896 st=Check, ns=Check, start=1, inputA=10, done=1, myMax=ec, maxValue=ec
+#                  906 st=Check, ns=Check, start=1, inputA=6e, done=1, myMax=ec, maxValue=ec
+#                  916 st=Check, ns=Check, start=1, inputA=3a, done=1, myMax=ec, maxValue=ec
+#                  926 st=Check, ns=Check, start=1, inputA=f4, done=1, myMax=f4, maxValue=ec
+#                  936 st=Check, ns=Check, start=1, inputA=b7, done=1, myMax=f4, maxValue=f4
+#                  946 st=Check, ns=Check, start=1, inputA=b6, done=1, myMax=f4, maxValue=f4
+#                  956 st=Check, ns=Check, start=1, inputA=4f, done=1, myMax=f4, maxValue=f4
+#                  966 st=Check, ns=Check, start=1, inputA=65, done=1, myMax=f4, maxValue=f4
+#                  976 st=Check, ns=Check, start=1, inputA=52, done=1, myMax=f4, maxValue=f4
+#                  986 st=Check, ns=Check, start=1, inputA=c5, done=1, myMax=f4, maxValue=f4
+#                  996 st=Check, ns=Check, start=1, inputA=59, done=1, myMax=f4, maxValue=f4
+#                 1006 st=Check, ns=Check, start=1, inputA=72, done=1, myMax=f4, maxValue=f4
+#                 1016 st=Check, ns=Check, start=1, inputA=f3, done=1, myMax=f4, maxValue=f4
+#                 1026 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=f4, maxValue=f4
+#                 1036 st=Check, ns=Reset, start=0, inputA=61, done=1, myMax=f4, maxValue=f4
+# Correct max (f4) found
+#                 1046 st=Reset, ns=Reset, start=0, inputA=61, done=1, myMax=f4, maxValue=f4
+#                 1056 st=Reset, ns=Check, start=1, inputA=89, done=1, myMax=89, maxValue=f4
+#                 1066 st=Check, ns=Check, start=1, inputA=5c, done=1, myMax=89, maxValue=89
+#                 1076 st=Check, ns=Check, start=1, inputA=b2, done=1, myMax=b2, maxValue=89
+#                 1086 st=Check, ns=Check, start=1, inputA=29, done=1, myMax=b2, maxValue=b2
+#                 1096 st=Check, ns=Check, start=1, inputA=91, done=1, myMax=b2, maxValue=b2
+#                 1106 st=Check, ns=Check, start=1, inputA=3c, done=1, myMax=b2, maxValue=b2
+#                 1116 st=Check, ns=Check, start=1, inputA=ca, done=1, myMax=ca, maxValue=b2
+#                 1126 st=Check, ns=Check, start=1, inputA=86, done=1, myMax=ca, maxValue=ca
+#                 1136 st=Check, ns=Check, start=1, inputA=fc, done=1, myMax=fc, maxValue=ca
+#                 1146 st=Check, ns=Check, start=1, inputA=13, done=1, myMax=fc, maxValue=fc
+#                 1156 st=Check, ns=Check, start=1, inputA=d0, done=1, myMax=fc, maxValue=fc
+#                 1166 st=Check, ns=Check, start=1, inputA=09, done=1, myMax=fc, maxValue=fc
+#                 1176 st=Check, ns=Check, start=1, inputA=42, done=1, myMax=fc, maxValue=fc
+#                 1186 st=Check, ns=Check, start=1, inputA=67, done=1, myMax=fc, maxValue=fc
+#                 1196 st=Check, ns=Check, start=1, inputA=fe, done=1, myMax=fe, maxValue=fc
+#                 1206 st=Check, ns=Check, start=1, inputA=7b, done=1, myMax=fe, maxValue=fe
+#                 1216 st=Check, ns=Check, start=1, inputA=4b, done=1, myMax=fe, maxValue=fe
+#                 1226 st=Check, ns=Reset, start=0, inputA=4b, done=1, myMax=fe, maxValue=fe
+# Correct max (fe) found
+#                 1236 st=Reset, ns=Reset, start=0, inputA=4b, done=1, myMax=fe, maxValue=fe
+#                 1246 st=Reset, ns=Check, start=1, inputA=61, done=1, myMax=61, maxValue=fe
+#                 1256 st=Check, ns=Check, start=1, inputA=10, done=1, myMax=61, maxValue=61
+#                 1266 st=Check, ns=Check, start=1, inputA=72, done=1, myMax=72, maxValue=61
+#                 1276 st=Check, ns=Check, start=1, inputA=7f, done=1, myMax=7f, maxValue=72
+#                 1286 st=Check, ns=Check, start=1, inputA=0d, done=1, myMax=7f, maxValue=7f
+#                 1296 st=Check, ns=Check, start=1, inputA=6d, done=1, myMax=7f, maxValue=7f
+#                 1306 st=Check, ns=Check, start=1, inputA=cd, done=1, myMax=cd, maxValue=7f
+#                 1316 st=Check, ns=Check, start=1, inputA=8e, done=1, myMax=cd, maxValue=cd
+#                 1326 st=Check, ns=Check, start=1, inputA=45, done=1, myMax=cd, maxValue=cd
+#                 1336 st=Check, ns=Check, start=1, inputA=e3, done=1, myMax=e3, maxValue=cd
+#                 1346 st=Check, ns=Check, start=1, inputA=df, done=1, myMax=e3, maxValue=e3
+#                 1356 st=Check, ns=Check, start=1, inputA=98, done=1, myMax=e3, maxValue=e3
+#                 1366 st=Check, ns=Check, start=1, inputA=15, done=1, myMax=e3, maxValue=e3
+#                 1376 st=Check, ns=Check, start=1, inputA=b4, done=1, myMax=e3, maxValue=e3
+#                 1386 st=Check, ns=Check, start=1, inputA=2a, done=1, myMax=e3, maxValue=e3
+#                 1396 st=Check, ns=Check, start=1, inputA=2e, done=1, myMax=e3, maxValue=e3
+#                 1406 st=Check, ns=Check, start=1, inputA=12, done=1, myMax=e3, maxValue=e3
+#                 1416 st=Check, ns=Check, start=1, inputA=92, done=1, myMax=e3, maxValue=e3
+#                 1426 st=Check, ns=Reset, start=0, inputA=92, done=1, myMax=e3, maxValue=e3
+# Correct max (e3) found
+#                 1436 st=Reset, ns=Reset, start=0, inputA=92, done=1, myMax=e3, maxValue=e3
+#                 1446 st=Reset, ns=Check, start=1, inputA=89, done=1, myMax=89, maxValue=e3
+#                 1456 st=Check, ns=Check, start=1, inputA=4b, done=1, myMax=89, maxValue=89
+#                 1466 st=Check, ns=Check, start=1, inputA=6a, done=1, myMax=89, maxValue=89
+#                 1476 st=Check, ns=Check, start=1, inputA=c4, done=1, myMax=c4, maxValue=89
+#                 1486 st=Check, ns=Check, start=1, inputA=1f, done=1, myMax=c4, maxValue=c4
+#                 1496 st=Check, ns=Check, start=1, inputA=6a, done=1, myMax=c4, maxValue=c4
+#                 1506 st=Check, ns=Check, start=1, inputA=79, done=1, myMax=c4, maxValue=c4
+#                 1516 st=Check, ns=Check, start=1, inputA=fe, done=1, myMax=fe, maxValue=c4
+#                 1526 st=Check, ns=Check, start=1, inputA=44, done=1, myMax=fe, maxValue=fe
+#                 1536 st=Check, ns=Check, start=1, inputA=65, done=1, myMax=fe, maxValue=fe
+#                 1546 st=Check, ns=Check, start=1, inputA=4c, done=1, myMax=fe, maxValue=fe
+#                 1556 st=Check, ns=Check, start=1, inputA=12, done=1, myMax=fe, maxValue=fe
+#                 1566 st=Check, ns=Check, start=1, inputA=f8, done=1, myMax=fe, maxValue=fe
+#                 1576 st=Check, ns=Check, start=1, inputA=80, done=1, myMax=fe, maxValue=fe
+#                 1586 st=Check, ns=Check, start=1, inputA=2e, done=1, myMax=fe, maxValue=fe
+#                 1596 st=Check, ns=Check, start=1, inputA=15, done=1, myMax=fe, maxValue=fe
+#                 1606 st=Check, ns=Check, start=1, inputA=84, done=1, myMax=fe, maxValue=fe
+#                 1616 st=Check, ns=Reset, start=0, inputA=84, done=1, myMax=fe, maxValue=fe
+# Correct max (fe) found
+#                 1626 st=Reset, ns=Reset, start=0, inputA=84, done=1, myMax=fe, maxValue=fe
+#                 1636 st=Reset, ns=Check, start=1, inputA=8c, done=1, myMax=8c, maxValue=fe
+#                 1646 st=Check, ns=Check, start=1, inputA=42, done=1, myMax=8c, maxValue=8c
+#                 1656 st=Check, ns=Check, start=1, inputA=6a, done=1, myMax=8c, maxValue=8c
+#                 1666 st=Check, ns=Check, start=1, inputA=5a, done=1, myMax=8c, maxValue=8c
+#                 1676 st=Check, ns=Check, start=1, inputA=cc, done=1, myMax=cc, maxValue=8c
+#                 1686 st=Check, ns=Check, start=1, inputA=e5, done=1, myMax=e5, maxValue=cc
+#                 1696 st=Check, ns=Check, start=1, inputA=0b, done=1, myMax=e5, maxValue=e5
+#                 1706 st=Check, ns=Check, start=1, inputA=f6, done=1, myMax=f6, maxValue=e5
+#                 1716 st=Check, ns=Check, start=1, inputA=4c, done=1, myMax=f6, maxValue=f6
+#                 1726 st=Check, ns=Check, start=1, inputA=10, done=1, myMax=f6, maxValue=f6
+#                 1736 st=Check, ns=Reset, start=0, inputA=10, done=1, myMax=f6, maxValue=f6
+# Correct max (f6) found
+#                 1746 st=Reset, ns=Reset, start=0, inputA=10, done=1, myMax=f6, maxValue=f6
+#                 1756 st=Reset, ns=Check, start=1, inputA=25, done=1, myMax=25, maxValue=f6
+#                 1766 st=Check, ns=Check, start=1, inputA=8f, done=1, myMax=8f, maxValue=25
+#                 1776 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=8f, maxValue=8f
+#                 1786 st=Check, ns=Check, start=1, inputA=83, done=1, myMax=8f, maxValue=8f
+#                 1796 st=Check, ns=Check, start=1, inputA=f0, done=1, myMax=f0, maxValue=8f
+#                 1806 st=Check, ns=Check, start=1, inputA=8a, done=1, myMax=f0, maxValue=f0
+#                 1816 st=Check, ns=Reset, start=0, inputA=8a, done=1, myMax=f0, maxValue=f0
+# Correct max (f0) found
+#                 1826 st=Reset, ns=Reset, start=0, inputA=8a, done=1, myMax=f0, maxValue=f0
+#                 1836 st=Reset, ns=Check, start=1, inputA=0b, done=1, myMax=0b, maxValue=f0
+#                 1846 st=Check, ns=Check, start=1, inputA=77, done=1, myMax=77, maxValue=0b
+#                 1856 st=Check, ns=Check, start=1, inputA=ad, done=1, myMax=ad, maxValue=77
+#                 1866 st=Check, ns=Check, start=1, inputA=8d, done=1, myMax=ad, maxValue=ad
+#                 1876 st=Check, ns=Check, start=1, inputA=09, done=1, myMax=ad, maxValue=ad
+#                 1886 st=Check, ns=Check, start=1, inputA=4c, done=1, myMax=ad, maxValue=ad
+#                 1896 st=Check, ns=Check, start=1, inputA=0f, done=1, myMax=ad, maxValue=ad
+#                 1906 st=Check, ns=Check, start=1, inputA=10, done=1, myMax=ad, maxValue=ad
+#                 1916 st=Check, ns=Check, start=1, inputA=5e, done=1, myMax=ad, maxValue=ad
+#                 1926 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=ad, maxValue=ad
+#                 1936 st=Check, ns=Check, start=1, inputA=41, done=1, myMax=ad, maxValue=ad
+#                 1946 st=Check, ns=Check, start=1, inputA=d3, done=1, myMax=d3, maxValue=ad
+#                 1956 st=Check, ns=Check, start=1, inputA=09, done=1, myMax=d3, maxValue=d3
+#                 1966 st=Check, ns=Check, start=1, inputA=12, done=1, myMax=d3, maxValue=d3
+#                 1976 st=Check, ns=Check, start=1, inputA=cb, done=1, myMax=d3, maxValue=d3
+#                 1986 st=Check, ns=Reset, start=0, inputA=cb, done=1, myMax=d3, maxValue=d3
+# Correct max (d3) found
+#                 1996 st=Reset, ns=Reset, start=0, inputA=cb, done=1, myMax=d3, maxValue=d3
+#                 2006 st=Reset, ns=Check, start=1, inputA=fe, done=1, myMax=fe, maxValue=d3
+#                 2016 st=Check, ns=Check, start=1, inputA=5e, done=1, myMax=fe, maxValue=fe
+#                 2026 st=Check, ns=Check, start=1, inputA=6c, done=1, myMax=fe, maxValue=fe
+#                 2036 st=Check, ns=Check, start=1, inputA=f3, done=1, myMax=fe, maxValue=fe
+#                 2046 st=Check, ns=Check, start=1, inputA=7b, done=1, myMax=fe, maxValue=fe
+#                 2056 st=Check, ns=Check, start=1, inputA=94, done=1, myMax=fe, maxValue=fe
+#                 2066 st=Check, ns=Check, start=1, inputA=b3, done=1, myMax=fe, maxValue=fe
+#                 2086 st=Check, ns=Check, start=1, inputA=d0, done=1, myMax=fe, maxValue=fe
+#                 2096 st=Check, ns=Check, start=1, inputA=80, done=1, myMax=fe, maxValue=fe
+#                 2106 st=Check, ns=Reset, start=0, inputA=80, done=1, myMax=fe, maxValue=fe
+# Correct max (fe) found
+#                 2116 st=Reset, ns=Reset, start=0, inputA=80, done=1, myMax=fe, maxValue=fe
+#                 2126 st=Reset, ns=Check, start=1, inputA=20, done=1, myMax=20, maxValue=fe
+#                 2136 st=Check, ns=Check, start=1, inputA=a0, done=1, myMax=a0, maxValue=20
+#                 2146 st=Check, ns=Check, start=1, inputA=92, done=1, myMax=a0, maxValue=a0
+#                 2156 st=Check, ns=Check, start=1, inputA=84, done=1, myMax=a0, maxValue=a0
+#                 2166 st=Check, ns=Check, start=1, inputA=f1, done=1, myMax=f1, maxValue=a0
+#                 2176 st=Check, ns=Check, start=1, inputA=a9, done=1, myMax=f1, maxValue=f1
+#                 2186 st=Check, ns=Reset, start=0, inputA=a9, done=1, myMax=f1, maxValue=f1
+# Correct max (f1) found
+#                 2196 st=Reset, ns=Reset, start=0, inputA=a9, done=1, myMax=f1, maxValue=f1
+#                 2206 st=Reset, ns=Check, start=1, inputA=2d, done=1, myMax=2d, maxValue=f1
+#                 2216 st=Check, ns=Check, start=1, inputA=ce, done=1, myMax=ce, maxValue=2d
+#                 2226 st=Check, ns=Check, start=1, inputA=d3, done=1, myMax=d3, maxValue=ce
+#                 2236 st=Check, ns=Check, start=1, inputA=c4, done=1, myMax=d3, maxValue=d3
+#                 2246 st=Check, ns=Check, start=1, inputA=55, done=1, myMax=d3, maxValue=d3
+#                 2256 st=Check, ns=Check, start=1, inputA=a8, done=1, myMax=d3, maxValue=d3
+#                 2266 st=Check, ns=Check, start=1, inputA=2d, done=1, myMax=d3, maxValue=d3
+#                 2276 st=Check, ns=Check, start=1, inputA=30, done=1, myMax=d3, maxValue=d3
+#                 2286 st=Check, ns=Check, start=1, inputA=a6, done=1, myMax=d3, maxValue=d3
+#                 2296 st=Check, ns=Check, start=1, inputA=47, done=1, myMax=d3, maxValue=d3
+#                 2306 st=Check, ns=Check, start=1, inputA=6e, done=1, myMax=d3, maxValue=d3
+#                 2316 st=Check, ns=Reset, start=0, inputA=6e, done=1, myMax=d3, maxValue=d3
+# Correct max (d3) found
+#                 2326 st=Reset, ns=Reset, start=0, inputA=6e, done=1, myMax=d3, maxValue=d3
+#                 2336 st=Reset, ns=Check, start=1, inputA=9c, done=1, myMax=9c, maxValue=d3
+#                 2346 st=Check, ns=Check, start=1, inputA=03, done=1, myMax=9c, maxValue=9c
+#                 2356 st=Check, ns=Check, start=1, inputA=71, done=1, myMax=9c, maxValue=9c
+#                 2366 st=Check, ns=Check, start=1, inputA=5b, done=1, myMax=9c, maxValue=9c
+#                 2376 st=Check, ns=Check, start=1, inputA=74, done=1, myMax=9c, maxValue=9c
+#                 2386 st=Check, ns=Check, start=1, inputA=2e, done=1, myMax=9c, maxValue=9c
+#                 2396 st=Check, ns=Reset, start=0, inputA=2e, done=1, myMax=9c, maxValue=9c
+# Correct max (9c) found
+#                 2406 st=Reset, ns=Reset, start=0, inputA=2e, done=1, myMax=9c, maxValue=9c
+#                 2416 st=Reset, ns=Check, start=1, inputA=a5, done=1, myMax=a5, maxValue=9c
+#                 2426 st=Check, ns=Check, start=1, inputA=23, done=1, myMax=a5, maxValue=a5
+#                 2436 st=Check, ns=Check, start=1, inputA=e8, done=1, myMax=e8, maxValue=a5
+#                 2446 st=Check, ns=Check, start=1, inputA=e0, done=1, myMax=e8, maxValue=e8
+#                 2456 st=Check, ns=Check, start=1, inputA=ae, done=1, myMax=e8, maxValue=e8
+#                 2466 st=Check, ns=Check, start=1, inputA=9e, done=1, myMax=e8, maxValue=e8
+#                 2476 st=Check, ns=Check, start=1, inputA=d2, done=1, myMax=e8, maxValue=e8
+#                 2486 st=Check, ns=Check, start=1, inputA=53, done=1, myMax=e8, maxValue=e8
+#                 2496 st=Check, ns=Check, start=1, inputA=81, done=1, myMax=e8, maxValue=e8
+#                 2506 st=Check, ns=Check, start=1, inputA=e5, done=1, myMax=e8, maxValue=e8
+#                 2516 st=Check, ns=Check, start=1, inputA=91, done=1, myMax=e8, maxValue=e8
+#                 2526 st=Check, ns=Check, start=1, inputA=08, done=1, myMax=e8, maxValue=e8
+#                 2536 st=Check, ns=Check, start=1, inputA=f9, done=1, myMax=f9, maxValue=e8
+#                 2546 st=Check, ns=Reset, start=0, inputA=f9, done=1, myMax=f9, maxValue=f9
+# Correct max (f9) found
+#                 2556 st=Reset, ns=Reset, start=0, inputA=f9, done=1, myMax=f9, maxValue=f9
+#                 2566 st=Reset, ns=Check, start=1, inputA=7c, done=1, myMax=7c, maxValue=f9
+#                 2576 st=Check, ns=Check, start=1, inputA=37, done=1, myMax=7c, maxValue=7c
+#                 2586 st=Check, ns=Check, start=1, inputA=f1, done=1, myMax=f1, maxValue=7c
+#                 2596 st=Check, ns=Check, start=1, inputA=37, done=1, myMax=f1, maxValue=f1
+#                 2606 st=Check, ns=Check, start=1, inputA=de, done=1, myMax=f1, maxValue=f1
+#                 2616 st=Check, ns=Check, start=1, inputA=4d, done=1, myMax=f1, maxValue=f1
+#                 2626 st=Check, ns=Reset, start=0, inputA=4d, done=1, myMax=f1, maxValue=f1
+# Correct max (f1) found
+#                 2636 st=Reset, ns=Reset, start=0, inputA=4d, done=1, myMax=f1, maxValue=f1
+#                 2646 st=Reset, ns=Check, start=1, inputA=e4, done=1, myMax=e4, maxValue=f1
+#                 2656 st=Check, ns=Check, start=1, inputA=82, done=1, myMax=e4, maxValue=e4
+#                 2666 st=Check, ns=Check, start=1, inputA=05, done=1, myMax=e4, maxValue=e4
+#                 2676 st=Check, ns=Check, start=1, inputA=d7, done=1, myMax=e4, maxValue=e4
+#                 2686 st=Check, ns=Check, start=1, inputA=28, done=1, myMax=e4, maxValue=e4
+#                 2696 st=Check, ns=Check, start=1, inputA=c3, done=1, myMax=e4, maxValue=e4
+#                 2706 st=Check, ns=Check, start=1, inputA=cd, done=1, myMax=e4, maxValue=e4
+#                 2716 st=Check, ns=Check, start=1, inputA=65, done=1, myMax=e4, maxValue=e4
+#                 2726 st=Check, ns=Check, start=1, inputA=61, done=1, myMax=e4, maxValue=e4
+#                 2736 st=Check, ns=Check, start=1, inputA=d7, done=1, myMax=e4, maxValue=e4
+#                 2746 st=Check, ns=Reset, start=0, inputA=d7, done=1, myMax=e4, maxValue=e4
+# Correct max (e4) found
+#                 2756 st=Reset, ns=Reset, start=0, inputA=d7, done=1, myMax=e4, maxValue=e4
+#                 2766 st=Reset, ns=Check, start=1, inputA=76, done=1, myMax=76, maxValue=e4
+#                 2776 st=Check, ns=Check, start=1, inputA=a6, done=1, myMax=a6, maxValue=76
+#                 2786 st=Check, ns=Check, start=1, inputA=75, done=1, myMax=a6, maxValue=a6
+#                 2796 st=Check, ns=Check, start=1, inputA=83, done=1, myMax=a6, maxValue=a6
+#                 2806 st=Check, ns=Check, start=1, inputA=0b, done=1, myMax=a6, maxValue=a6
+#                 2816 st=Check, ns=Check, start=1, inputA=0e, done=1, myMax=a6, maxValue=a6
+#                 2826 st=Check, ns=Reset, start=0, inputA=0e, done=1, myMax=a6, maxValue=a6
+# Correct max (a6) found
+#                 2836 st=Reset, ns=Reset, start=0, inputA=0e, done=1, myMax=a6, maxValue=a6
+# Congratulations!  Your implementation passes the testbenc
+# End simulation of findMax test - Pradeep Reddy (pmanthu@pdx.edu)
+# 
+# ** Note: $stop    : N:/PSUProjects/ece508f21/pmanthu/hw2/prob2/hdl/tb_findMax.sv(97)
+#    Time: 2846 ns  Iteration: 1  Instance: /tb_findMax
+# Break in NamedBeginStat stimulus at N:/PSUProjects/ece508f21/pmanthu/hw2/prob2/hdl/tb_findMax.sv line 97
+
+

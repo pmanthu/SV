@@ -1,0 +1,5 @@
+We have implemented a common form of digital system called an FSMD (Finite State Machine with Datapath). An FSM-D implements a register based datapath that is controlled by a finite state machine. This digital system finds the maximum unsigned number that appears on its inputs.
+
+start is a control signal, telling findMax when to start receiving inputs. The FSM-D will wait until the start signal is asserted before proceeding. When start is first asserted, the first inputA value is on the input. While start remains asserted there will be new input values on inputA on each successive clock edge. As each of these inputs is available, the maxValue output is updated so that it is always the maximum of the prior inputs.
+
+When start is de-asserted, the done signal is asserted indicating that the maxValue output has the maximum value of the sequence of inputs. done remains asserted for one clock cycle. The system then waits for start to be asserted again. On reset, maxValue should be 0 and the system should be waiting for start. There could be more/less than four inputs in the sequence.

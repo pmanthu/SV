@@ -1,0 +1,76 @@
+# Compile of tb_SerialTOFED.sv was successful.
+# Compile of SerialTOFEDDefs.sv was successful.
+# Compile of SerialTOFED_cntr.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.tb_SerialTOFED
+# End time: 20:21:52 on Oct 22,2021, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.tb_SerialTOFED 
+# Start time: 20:21:52 on Oct 22,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.SerialTOFEDDefs(fast)
+# Loading work.tb_SerialTOFED(fast)
+# Loading work.SerialTOFED_cntr_sv_unit(fast)
+# Loading work.SerialTOFED_cntr(fast)
+run -all
+# ECE 571 Fall 2021: (HW #2) Serial 3-of-5 checker w/ counters - Pradeep Reddy (pmanthu@pdx.edu)
+# Sources: N:/PSUProjects/ece571f21/pmanthu/hw2/prob1/hdl
+# 
+#                    5	System is in reset
+#                    5	Datastream = 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# 
+# 
+#                   15	System is in reset
+#                   15	Datastream = 000000000100010000110010000101001100011101000010010101001011011000110101110011111000010001100101001110100101011011010111110001100111010110111110011101111101111100000
+# 
+# 
+#                   25	System is in reset
+#                   25	Datastream = 000000000100010000110010000101001100011101000010010101001011011000110101110011111000010001100101001110100101011011010111110001100111010110111110011101111101111100000
+# 
+# 
+#                   35	System is in reset
+#                   35	Datastream = 000000000100010000110010000101001100011101000010010101001011011000110101110011111000010001100101001110100101011011010111110001100111010110111110011101111101111100000
+# 
+# 
+#                   95	data word = 00000	valid(counters) = FALSE
+#                  145	data word = 11111	valid(counters) = FALSE
+#                  195	data word = 11110	valid(counters) = FALSE
+#                  245	data word = 11101	valid(counters) = FALSE
+#                  295	data word = 11100	valid(counters) =  TRUE
+#                  345	data word = 11011	valid(counters) = FALSE
+#                  395	data word = 11010	valid(counters) =  TRUE
+#                  445	data word = 11001	valid(counters) =  TRUE
+#                  495	data word = 11000	valid(counters) = FALSE
+#                  545	data word = 10111	valid(counters) = FALSE
+#                  595	data word = 10110	valid(counters) =  TRUE
+#                  645	data word = 10101	valid(counters) =  TRUE
+#                  695	data word = 10100	valid(counters) = FALSE
+#                  745	data word = 10011	valid(counters) =  TRUE
+#                  795	data word = 10010	valid(counters) = FALSE
+#                  845	data word = 10001	valid(counters) = FALSE
+#                  895	data word = 10000	valid(counters) = FALSE
+#                  945	data word = 01111	valid(counters) = FALSE
+#                  995	data word = 01110	valid(counters) =  TRUE
+#                 1045	data word = 01101	valid(counters) =  TRUE
+#                 1095	data word = 01100	valid(counters) = FALSE
+#                 1145	data word = 01011	valid(counters) =  TRUE
+#                 1195	data word = 01010	valid(counters) = FALSE
+#                 1245	data word = 01001	valid(counters) = FALSE
+#                 1295	data word = 01000	valid(counters) = FALSE
+#                 1345	data word = 00111	valid(counters) =  TRUE
+#                 1395	data word = 00110	valid(counters) = FALSE
+#                 1445	data word = 00101	valid(counters) = FALSE
+#                 1495	data word = 00100	valid(counters) = FALSE
+#                 1545	data word = 00011	valid(counters) = FALSE
+#                 1595	data word = 00010	valid(counters) = FALSE
+#                 1645	data word = 00001	valid(counters) = FALSE
+#                 1695	data word = 00000	valid(counters) = FALSE
+# 
+# 
+# NO ERRORS DETECTED - GOOD JOB!
+# End simulation of ECE 571 Fall 2021: (HW #2) Serial 3-of-5 checker w/ counters - Pradeep Reddy (pmanthu@pdx.edu)
+# 
+# ** Note: $stop    : N:/PSUProjects/ece571f21/pmanthu/hw2/prob1/hdl/tb_SerialTOFED.sv(167)
+#    Time: 1706 ns  Iteration: 0  Instance: /tb_SerialTOFED
+# Break in Module tb_SerialTOFED at N:/PSUProjects/ece571f21/pmanthu/hw2/prob1/hdl/tb_SerialTOFED.sv line 167
